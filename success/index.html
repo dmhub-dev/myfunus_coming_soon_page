@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedankt - Formulier ingediend</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .success-container {
+            min-height: calc(100vh - 400px); 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+        
+        .success-content {
+            text-align: left;
+            max-width: 500px;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background-color: #fff;
+            font-family: 'Akagi Pro', sans-serif;
+        }
+        
+        .success-title {
+            font-family: 'Akagi Pro', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 15px;
+        }
+        
+        .success-message {
+            font-family: 'Akagi Pro', sans-serif;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+        
+        .back-link {
+            font-family: 'Akagi Pro', sans-serif;
+            color: #1d7f72;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700; 
+        }
+        
+        .back-link:hover {
+            color: #259d8c;
+            text-decoration: underline;
+        }
+        
+        .back-link::before {
+            content: "< ";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">
+            <img src="/myfunus-logo.png" alt="myFunus Logo" class="logo-image">
+            <h2>Alles voor een dierbare herinnering</h2>
+        </div>
+    </div>
+
+    <div class="success-container">
+        <div class="success-content">
+            <h1 class="success-title">Bedankt!</h1>
+            <p class="success-message">Uw formulierinzending is ontvangen.</p>
+            <a href="/" class="back-link">Terug naar de site</a>
+        </div>
+    </div>
+</body>
+</html>

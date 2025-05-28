@@ -10,6 +10,7 @@
   <div class="hero">
     <div class="logo">
       <img src="myfunus-logo.png" alt="myFunus Logo" class="logo-image">
+      <h2>Alles voor een dierbare herinnering</h2>
     </div>
   </div>
 
@@ -17,15 +18,16 @@
     <h1>Binnenkort gaan we live!</h1>
     <p>Kan je niet wachten? Meld je aan voor onze beta-versie</p>
 
-    <!-- Updated Form -->
+    <!-- Updated Form with Netlify success URL -->
     <form class="signup-form" name="beta-signup" method="POST" netlify>
       <input type="hidden" name="form-name" value="beta-signup">
+      <input type="hidden" name="success_url" value="/success/index.html">
       <input type="email" name="email" placeholder="Vul je e-mailadres in" required>
       <button type="submit">Aanmelden</button>
     </form>
 
     <div class="contact">
-      <a href="#">Neem contact met ons op</a>
+      <a href="mailto:marcel@myfunus.com" class="contact-link">Neem contact met ons op</a>
     </div>
   </div>
 </body>
