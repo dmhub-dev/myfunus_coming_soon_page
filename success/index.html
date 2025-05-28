@@ -12,52 +12,101 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 40px 20px;
-            background-color: #fff;
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+            position: relative;
         }
         
         .success-content {
-            text-align: left;
-            max-width: 500px;
-            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+            padding: 60px;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 12px;
             background-color: #fff;
             font-family: 'Akagi Pro', sans-serif;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 30px;
+            background-color: #1d7f72;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            position: relative;
+        }
+        
+        .success-icon::before {
+            content: "✓";
+            font-weight: bold;
         }
         
         .success-title {
             font-family: 'Akagi Pro', sans-serif;
-            font-size: 2rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #222;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         
         .success-message {
             font-family: 'Akagi Pro', sans-serif;
-            font-size: 1rem;
-            color: #666;
-            margin-bottom: 25px;
-            line-height: 1.4;
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.6;
         }
         
         .back-link {
             font-family: 'Akagi Pro', sans-serif;
-            color: #1d7f72;
+            display: inline-block;
+            color: white;
+            background-color: #1d7f72;
             text-decoration: none;
-            font-size: 1rem;
-            font-weight: 700; 
+            font-size: 1.1rem;
+            font-weight: 700;
+            padding: 12px 30px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
         
         .back-link:hover {
-            color: #259d8c;
-            text-decoration: underline;
+            background-color: #259d8c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(29, 127, 114, 0.2);
         }
         
         .back-link::before {
-            content: "< ";
-            margin-right: 5px;
+            content: "← ";
+            margin-right: 8px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .success-content {
+                padding: 40px 30px;
+            }
+            
+            .success-title {
+                font-size: 2rem;
+            }
+            
+            .success-message {
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -71,6 +120,7 @@
 
     <div class="success-container">
         <div class="success-content">
+            <div class="success-icon"></div>
             <h1 class="success-title">Bedankt!</h1>
             <p class="success-message">Uw formulierinzending is ontvangen.</p>
             <a href="/" class="back-link">Terug naar de site</a>
